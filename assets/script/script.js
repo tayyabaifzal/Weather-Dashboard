@@ -147,4 +147,82 @@ function getWeather(){
     });
 };
 
+//show Weather function
+function showToday() {
+    todayWeather.empty();
+
+    const weatherToday = $("<div>")
+    let todayHeader = $("<h3>");
+    let todayTemp = $("<p>").attr("id", "today-temp").addClass("today-text");
+    let todayWind = $("<p>").attr("id", "today-wind").addClass("today-text");
+    let todayHumidity= $("<p>").attr("id", "today-humid").addClass("today-text");
+    let iconDiv = $("<img>");
+
+    todayHeader.html(cityName + " ("+ today + ") ") //+ icon
+    let iconURL = "https://openweathermap.org/img/wn/" + todayIconCode + "@2x.png";
+    todayHeader.attr("id", "todayHeader")
+    todayTemp.text("Temp: " + celsius +  "°c");
+    todayWind.text("Wind speed: " + wind + "KPH")
+    todayHumidity.text("Humidity: " + humidity + "%");
+
+    weatherToday.append(todayHeader);
+    weatherToday.append(todayTemp);
+    weatherToday.append(todayWind);
+    weatherToday.append(todayHumidity);
+    todayWeather.append(weatherToday);
+
+    iconDiv.attr("src", iconURL);
+    todayHeader.append(iconDiv)
+
+    makeCards(); 
+}
+
+
+//makes cards for 5-day forecast
+function makeCards(){ 
+    todayWeather.after(fiveDayTitle);
+    forecast.empty();
+    day = 1;
+    cardTimes = [4, 12, 20, 28, 36];
+
+    for (let i = 0; i < cardTimes.length; i ++){
+    //moment.js
+        let dayX = moment().add(day, "days").format("D/MM/YYYY");
+    //create card
+        let forecastCard = $("<div>").addClass("card card1 col-sm-12 col-lg-2 col-md-3");
+    // give card ID
+        forecastCard.attr("id", "day"+(day))
+
+// designing cards:
+    let cardTitle = $("<h5>").addClass("card-title");
+    let cardIcon = $("<img>");
+    let cardTemp =  $("<p>").addClass("card-text");
+    let cardWind =  $("<p>").addClass("card-text");
+    let cardHumidity =  $("<p>").addClass("card-text");
+
+// grab info for cards
+    celsiusCard = (responseGrab.list[cardTimes[i]].main.temp).toFixed(1);
+    windCard = responseGrab.list[cardTimes[i]].wind.speed;
+    humidityCard =  responseGrab.list[cardTimes[i]].main.humidity;
+    iconCard = responseGrab.list[cardTimes[i]].weather[0].icon;
+    let iconURL = "https://openweathermap.org/img/wn/" + iconCard + "@2x.png";
+
+// setting card content:
+    cardTitle.text(dayX);
+    cardIcon.attr("src", iconURL);
+    cardTemp.text("Temp: " + celsiusCard + "°c");
+    cardWind.text("Wind: " + windCard + "KPH");
+    cardHumidity.text("Humidity: " + humidityCard + "%");
+// appending cards:
+    forecastCard.append(cardTitle);
+    forecastCard.append(cardIcon);
+    forecastCard.append(cardTemp);
+    forecastCard.append(cardWind);
+    forecastCard.append(cardHumidity);
+    forecast.append(forecastCard);
+
+    day++; 
+    }
+};
+
 
