@@ -20,3 +20,24 @@ historyTitle.html('<i class="fa-solid fa-clock-rotate-left"></i>  Recent searche
 var locationBtn;
 let locationsArr = [];
 let historyArr = [];
+
+//todays weather
+let cityName;
+let todaysDate;
+let tempKelv;
+let celsius;
+let wind;
+let humidity;
+let todayIconCode;
+
+//forecast cards
+let tempKelvCard;
+let celsiusCard = (tempKelvCard - 273.15).toFixed(2);
+let windCard;
+let humidityCard;
+let iconCard;
+
+//5-day forecast cards:
+let forecast = $("#forecast");
+let fiveDayTitle = $("<h3>").addClass("fiveDayTitle");
+fiveDayTitle.text("5-Day Forecast:")
