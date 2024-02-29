@@ -207,13 +207,13 @@ function makeCards(){
     iconCard = responseGrab.list[cardTimes[i]].weather[0].icon;
     let iconURL = "https://openweathermap.org/img/wn/" + iconCard + "@2x.png";
 
-// setting card content:
+// setting card content
     cardTitle.text(dayX);
     cardIcon.attr("src", iconURL);
     cardTemp.text("Temp: " + celsiusCard + "°c");
     cardWind.text("Wind: " + windCard + "KPH");
     cardHumidity.text("Humidity: " + humidityCard + "%");
-// appending cards:
+// appending cards
     forecastCard.append(cardTitle);
     forecastCard.append(cardIcon);
     forecastCard.append(cardTemp);
@@ -226,3 +226,15 @@ function makeCards(){
 };
 
 
+//clear button
+let clearBtn = $("<button>");
+clearBtn.attr("id", "clear-button");
+clearBtn.html('<i class="fa-regular fa-trash-can"></i> Clear history');
+sideBar.append(clearBtn);
+
+clearBtn.on("click", function(event){
+    localStorage.clear();
+    buttonList.empty();
+    locationsArr = [];
+    historyArr = [];
+})
