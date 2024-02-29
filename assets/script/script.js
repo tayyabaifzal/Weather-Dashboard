@@ -49,3 +49,19 @@ let forecastday2 = moment().add(2, "days").format("D/MM/YYYY");
 let forecastday3 = moment().add(3, "days").format("D/MM/YYYY");
 let forecastday4 = moment().add(4, "days").format("D/MM/YYYY");
 let forecastday5 = moment().add(5, "days").format("D/MM/YYYY");
+
+// button for location history search
+$(document).ready(getHistory());
+
+function getHistory(){
+    buttonList.empty();
+
+    historyArr = JSON.parse(localStorage.getItem("searchLocation"));
+    console.log(historyArr);
+    
+    console.log("locations array here: " + locationsArr);
+    if (historyArr !== null) {
+        locationsArr = historyArr;
+        makeHistoryBtn();
+    }
+};
