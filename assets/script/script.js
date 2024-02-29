@@ -126,4 +126,25 @@ function geoCode() {
 };
 
 
-=
+//get Weather function
+function getWeather(){
+    let queryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + long + "&appid=42747e74a920b7df0770c3dfae22459d&units=metric";
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+    
+        responseGrab = response;  
+        cityName = response.city.name;
+        todaysDate = response.list[0].dt_txt;
+        
+        celsius = (response.list[0].main.temp).toFixed(1);
+        todayIconCode = response.list[0].weather[0].icon;
+
+        wind = response.list[0].wind.speed;
+        humidity =  response.list[0].main.humidity;
+    showToday();
+    });
+};
+
+
