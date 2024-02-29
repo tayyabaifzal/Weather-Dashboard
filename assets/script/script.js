@@ -37,7 +37,15 @@ let windCard;
 let humidityCard;
 let iconCard;
 
-//5-day forecast cards:
+//5-day forecast cards
 let forecast = $("#forecast");
 let fiveDayTitle = $("<h3>").addClass("fiveDayTitle");
 fiveDayTitle.text("5-Day Forecast:")
+
+//moment.js for dates
+let today = moment().format("D/MM/YYYY");
+let forecastday1 = moment().add(1, "days").format("D/MM/YYYY");
+let forecastday2 = moment().add(2, "days").format("D/MM/YYYY");
+let forecastday3 = moment().add(3, "days").format("D/MM/YYYY");
+let forecastday4 = moment().add(4, "days").format("D/MM/YYYY");
+let forecastday5 = moment().add(5, "days").format("D/MM/YYYY");
