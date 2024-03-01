@@ -1,103 +1,88 @@
-.weather-header{
-
-    color:white;
-    padding: 2rem;
-    background-color:#0047AB ;
+body {
+    background: linear-gradient(to bottom, #3889d4 0%, #fCA321 100%);
+    background-repeat: no-repeat;
 }
 
-
-.weather-search{
-
-    border-radius: 5px;
-    width: 100%;
-    height: 2.5rem;
+.weather-header {
+    background-color: #3889d4 !important;
 }
 
-#form-heading{
+#search-aside {
+    background: linear-gradient(to bottom, #3889d4 0%, #fCA321 100%);
+}
 
-    font-size: 2.2rem;
-    padding-top: 10px;
-    padding-bottom: 10px;
+#forecast-display {
+    background: linear-gradient(to bottom, #3889d4 0%, #fCA321 100%)
+}
+
+#todayHeader {
+    font-weight: 700;
+}
+
+.today-text {
+    font-size: 1.5rem;
+}
+
+/* forecast cards */
+.card-title {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+/*   search bar */
+#form-heading {
+    text-align: center;
+    font-weight: 600;
+}
+
+#search-input {
+    border: 5px solid white;
+    min-width: 220px;
 }
 
 #search-button {
-
-    background-color: #0047AB;
-    width: 100%;
-    margin-top: 1rem;
-    border-radius: 5px;
-    color: aliceblue;
-    display: block;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: steelblue;
+    min-width: 220px;
+    margin-left: 50px;
 }
 
-.weather-hr {
-
-    display: block;
-    border: 2px solid #0047AB;
-    width: 100%;
-
+#search-button:hover {
+    background-color: rgb(35, 64, 87);
+    color: #fCA321;
 }
 
-h3{
-    padding-left: 1rem;
-    text-decoration: underline;
+.input-group {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
 }
 
-li{
-    list-style-type: none;
+/*  recent searches  */
+#recent-header {
+    font-weight: 600;
+    text-align: center;
 }
 
-.currentvar {
-    font-size: 1.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
-}
-
-.currentIcon{
-    display: inline;
-}
-
-#today{
-    width: 100%;
-}
-
-#forecast{
-    margin-left: 0.1rem;
-    width: 99.8%;
-}
-
-h4{
-    font-size: 1.8rem !important;
-    padding-left: 1rem;
-}
-
-.forecastDiv{
-    background-color: #153055;
-    color: aliceblue;
-    margin:0.5rem;
-    font-size: 1.3rem !important;
-}
-
-.forecastDiv li{
-    padding-bottom: 0.5rem;
-}
-
-.forecastHeading{
-
-    margin-top:1rem;
-    font-size: 1.5rem;
-}
-
-#history button{
-    padding: 0.3rem;
-    margin:0.3rem;
-    border-radius: 5px;
+.location-button:hover {
+    background-color: rgb(35, 64, 87);
+    color: #fCA321;
     border: none;
-    background-color: #86afe7;
-    color: aliceblue;
 }
 
-#history button:hover{
+#clear-button {
+    min-width: 220px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    align-self: center;
+    justify-self: center;
+}
 
-    border: solid #153055;
+.fa-trash-can {
+    color: red;
 }
