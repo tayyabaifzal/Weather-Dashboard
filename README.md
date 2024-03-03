@@ -13,9 +13,9 @@ This app requires no installation. The quiz can be used easily run on the deskto
 ## Links:
 The link to the deployed app is below:
 
+https://tayyabaifzal.github.io/Weather-Dashboard/
 
-
-You can access the code via github repo link below:
+You can access the code via github repo linked below:
 
 https://github.com/tayyabaifzal/Weather-Dashboard
 
