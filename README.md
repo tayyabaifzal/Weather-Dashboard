@@ -1,23 +1,18 @@
 # Weather-Dashboard
 
 ## Description:
-The application is a timed quiz of the basic javascript. The user has 120 seconds to answer multiple choice questons about basic coding. The user can enter their intials and save the score to the leaderboard at the end of the quiz. 
+
+This app allows user to search for weather. The user can search for any city and will be able to to get forecast for the next 5 days. 
 
 ## Installation:
-This app requires no installation. The quiz can be played on the browser by visiting the URL below.  Open the link on your device whenever you need to choose a strong, secure password.
+This app requires no installation. The quiz can be used easily run on the desktop or mobile browser. The app shows weather for the current day as well as for the next 5 days. The app also shows wind and humidity along with temperature. This app saves the data for previously viewed cities which allows user to acess the cities quicker. The saved locations can be cleared by clicking the 'clear history' button.   
 
-
-![Alt text](/assets/images/ss1.png)
-
-![Alt text](/assets/images/ss2.png)
-
-![Alt text](/assets/images/ss3.png)
+![Alt text](/assets/images/1.png)
 
 
 ## Links:
 The link to the deployed app is below:
 
-???????????????????????????????????????????????????
 
 
 You can access the code via github repo link below:

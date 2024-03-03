@@ -1,5 +1,9 @@
+:root {
+    --bg-gradient: linear-gradient(to bottom, #3889d4 0%, #fCA321 100%);
+}
+
 body {
-    background: linear-gradient(to bottom, #3889d4 0%, #fCA321 100%);
+    background: var(--bg-gradient);
     background-repeat: no-repeat;
 }
 
@@ -8,11 +12,12 @@ body {
 }
 
 #search-aside {
-    background: linear-gradient(to bottom, #3889d4 0%, #fCA321 100%);
+    background: var(--bg-gradient)
 }
 
 #forecast-display {
-    background: linear-gradient(to bottom, #3889d4 0%, #fCA321 100%)
+    background: var(--bg-gradient);
+
 }
 
 #todayHeader {
@@ -83,6 +88,7 @@ body {
     justify-self: center;
 }
 
-.fa-trash-can {
-    color: red;
+#clear-button:hover {
+    background-color: rgb(35, 64, 87);
+    color: #fCA321;
 }
